@@ -1,0 +1,404 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0b1220;
+  color: #fff;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ================= HEADER ================= */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(10, 18, 32, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.logo img {
+  height: 45px;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #00c2ff;
+}
+
+/* MENU MOBILE */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* ================= HERO ================= */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 80px;
+  background: radial-gradient(circle at top, #0f1b33, #0b1220);
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+.hero-text span {
+  color: #00c2ff;
+}
+
+.hero-text p {
+  margin: 15px 0;
+  color: #b0b8c5;
+  max-width: 450px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.btn-primary,
+.btn-outline {
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background: #00c2ff;
+  color: #000;
+}
+
+.btn-primary:hover {
+  background: #00a3d4;
+}
+
+.btn-outline {
+  border: 1px solid #00c2ff;
+  color: #00c2ff;
+}
+
+.btn-outline:hover {
+  background: #00c2ff;
+  color: #000;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 450px;
+}
+
+.scroll-down {
+  text-align: center;
+  margin-top: 30px;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+/* ================= SECTIONS ================= */
+section {
+  padding: 80px 0;
+}
+
+/* ================= SECTION HEADER ================= */
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-header span {
+  color: #00c2ff;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.section-header h2 {
+  font-size: 2.2rem;
+  margin-top: 10px;
+}
+
+/* ================= ABOUT ================= */
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.about-text p {
+  margin-bottom: 15px;
+  color: #b0b8c5;
+}
+
+.signature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* ================= CARDS ================= */
+.mission-grid,
+.services-grid,
+.projects-grid,
+.team-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.mission-grid {
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 40px;
+}
+
+.card {
+  background: #121c2e;
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border: 1px solid #00c2ff;
+}
+
+/* ================= SERVICES ================= */
+.services-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.service-card {
+  background: #121c2e;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.service-card i {
+  font-size: 30px;
+  color: #00c2ff;
+  margin-bottom: 10px;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ================= PROJECTS ================= */
+.projects-grid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.project-card {
+  background: #121c2e;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.project-card img {
+  width: 100%;
+}
+
+.project-card h3 {
+  padding: 10px;
+}
+
+.project-card p {
+  padding: 0 10px;
+  color: #b0b8c5;
+}
+
+.project-card a {
+  display: block;
+  padding: 10px;
+  color: #00c2ff;
+  text-decoration: none;
+}
+
+/* ================= TEAM ================= */
+.team-grid {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.member {
+  text-align: center;
+}
+
+.member img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* ================= STATS ================= */
+.stats .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  text-align: center;
+  gap: 20px;
+}
+
+.stat-box h2 {
+  color: #00c2ff;
+  font-size: 2rem;
+}
+
+/* ================= CONTACT ================= */
+.contact .container {
+  display: flex;
+  gap: 40px;
+}
+
+.contact-form {
+  flex: 1;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+}
+
+.contact-form button {
+  padding: 12px;
+  background: #00c2ff;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-info {
+  flex: 1;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  background: #0a0f1c;
+  padding: 40px 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.footer a {
+  color: #b0b8c5;
+  text-decoration: none;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 20px;
+  color: #555;
+}
+
+/* ================= RESPONSIVO ================= */
+@media (max-width: 768px) {
+
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-content {
+    flex-direction: column;
+  }
+
+  .contact .container {
+    flex-direction: column;
+  }
+
+  .navbar {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #0b1220;
+    padding: 20px;
+  }
+
+  .navbar.active {
+    display: block;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
